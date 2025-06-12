@@ -30,3 +30,51 @@ int main() {
 
     return 0;
 }
+#include <stdio.h>
+
+// Definindo constantes para quantidade de movimentos
+#define BISPO_MOV 5
+#define TORRE_MOV 5
+#define RAINHA_MOV 8
+
+// Função que move o bispo (diagonal superior direita)
+void moverBispo() {
+    printf("Movimentando o Bispo (Diagonal Superior Direita):\n");
+    for (int i = 0; i < BISPO_MOV; i++) {
+        printf("Cima\n");
+        printf("Direita\n");
+    }
+    printf("\n");
+}
+
+// Função que move a torre (horizontal direita)
+void moverTorre() {
+    printf("Movimentando a Torre (Direita):\n");
+    int i = 0;
+    while (i < TORRE_MOV) {
+        printf("Direita\n");
+        i++;
+    }
+    printf("\n");
+}
+
+// Função que move a rainha (horizontal esquerda)
+void moverRainha() {
+    printf("Movimentando a Rainha (Esquerda):\n");
+    int i = 0;
+    do {
+        printf("Esquerda\n");
+        i++;
+    } while (i < RAINHA_MOV);
+    printf("\n");
+}
+
+int main() {
+    printf("=== DESAFIO DE XADREZ - MATECHECK ===\n\n");
+
+    moverBispo();
+    moverTorre();
+    moverRainha();
+
+    return 0;
+}
